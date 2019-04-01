@@ -21,8 +21,8 @@ import vo.Message;
 @ServerEndpoint("/chatSocket")
 public class ChatSocket {
 	
-	
-	//private Gson gson = new Gson();
+
+	private Gson gson = new Gson();
 	
 	private String username;
 	private List<Session> sessions = new ArrayList<Session>();
@@ -37,15 +37,15 @@ public class ChatSocket {
 		username = string.split("=")[1];
 		System.out.println("000000000000");
 		System.out.println(username);
-		this.names.add(username);
-		this.sessions.add(session);
+		names.add(username);
+		sessions.add(session);
 		this.map.put(username, session);
 		
 		String msg = "»¶Ó­"+this.username+"½øÈëÁÄÌìÃÜÊÒ!!</br>";
 		Message message = new Message();
 		
 		message.setMessage(msg);
-		message.setUsernames(this.names);
+		message.setUsernames(names);
 		
 		this.broadcast(this.sessions,msg);//message.toJson());
 				
