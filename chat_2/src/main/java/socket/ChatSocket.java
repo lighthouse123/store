@@ -84,7 +84,7 @@ public class ChatSocket {
 			Message message = new Message();
 			//message.setUsernames(this.names);
 			message.setContent(this.username,"<font color=red> Ë½ÁÄ£º"+vo.getMsg()+"</font>");
-			broadcast(sessions,message.toJson());
+			//broadcast(sessions,message.toJson());
 			
 			
 		/*	
@@ -110,14 +110,13 @@ public class ChatSocket {
 		
 		
 		
-	}
-	
-	*/
+		}}}
 	
 	
 	
 	
-}
+	
+	
 
 
 
